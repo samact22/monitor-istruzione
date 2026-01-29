@@ -39,6 +39,7 @@ except Exception:
 
 previous_state = get_state()
 
+# Notifica solo se cambia stato
 if current_state != previous_state:
     if current_state == "online":
         send_telegram(f"✅ istruzione.it ONLINE!\n{URL}")
@@ -47,4 +48,3 @@ if current_state != previous_state:
     save_state(current_state)
 else:
     print(f"✔ Stato invariato: {current_state}")
-
