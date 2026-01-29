@@ -2,8 +2,8 @@ name: Monitor Istruzione
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
-  workflow_dispatch:
+    - cron: "*/5 * * * *"  # ogni 5 minuti
+  workflow_dispatch:         # permette di avviare manualmente
 
 jobs:
   check:
@@ -18,3 +18,4 @@ jobs:
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
+
