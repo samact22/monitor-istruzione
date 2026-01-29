@@ -13,5 +13,5 @@ def send(msg):
 r = requests.get(URL, timeout=10)
 text = r.text.lower()
 
-if "manutenzione" not in text:
-    send("✅ istruzione.it ONLINE!\nhttps://www.istruzione.it")
+send("🧪 TEST OK – Notifica funzionante")
+
